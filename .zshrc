@@ -82,6 +82,7 @@ plugins=(
   git 
   golang
   zsh-autosuggestions
+  zsh-syntax-highlighting
   sudo
   dirhistory
   web-search
@@ -130,3 +131,7 @@ function openNvim {
 	nvim $1
     fi
 }
+
+# Personal Vars
+export GOTPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin

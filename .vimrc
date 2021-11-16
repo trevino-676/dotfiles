@@ -27,3 +27,5 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
