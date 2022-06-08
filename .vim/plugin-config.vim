@@ -83,3 +83,6 @@ set signcolumn=yes
 
 " fugitive always vertical diffing
 set diffopt+=vertical
+
+" Disabling vim-go mapping gd
+let g:go_def_mapping_enabled = 0

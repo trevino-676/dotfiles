@@ -84,6 +84,7 @@ plugins=(
   git 
   golang
   zsh-autosuggestions
+  zsh-syntax-highlighting
   sudo
   dirhistory
   web-search
@@ -158,3 +159,7 @@ bindkey "^[[3~" delete-char
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
+
+# Personal Vars
+export GOTPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
