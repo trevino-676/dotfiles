@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -130,3 +132,29 @@ function openNvim {
 	nvim $1
     fi
 }
+alias k=kubectl
+complete -F __start_kubectl k
+
+export GOPATH="/Users/trevino/workspaces/go"
+export REDIS_TYPE="REDIS"
+export API_PORT="3001"
+export INTEGRATION_TEST_URL="http://localhost:3001"
+export RADS_ANALYSE_TESTPLAN="Category:DEFAULT,KnownByMES:TRUE,RecipeType:MainTP,TestplanGroup:RADS,TestplanName:ANALYSE"
+export PATH="$GOPATH/bin:$PATH"
+
+alias gti="go test -v -coverprofile=coverage.out -timeout 40m -run Integration ./..."
+alias gtu="go test -v -coverprofile=coverage.out -timeout 40m -short ./..."
+alias p=podman
+alias iservice="cd ~/workspaces/go/src"
+alias ll='lsd -lh --group-dirs=first'
+alias la='lsd -a --group-dirs=first'
+alias l='lsd --group-dirs=first'
+alias cat='bat'
+
+# keybindings
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"

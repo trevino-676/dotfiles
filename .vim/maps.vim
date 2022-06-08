@@ -241,3 +241,29 @@ function CheckNextParens(c)
   endif
   return a:c
 endfunction
+
+" Copy maps
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
+
+" Cut maps
+vnoremap <leader>d "+d
+nnoremap <leader>d "+d
+
+" Paste maps
+vnoremap <leader>p "+p
+nnoremap <leader>p "+p
+vnoremap <leader>P "+P
+nnoremap <leader>P "+P
+
+" Close actual buffer
+nnoremap <C-q> :bdelete<CR>
+
+" Prev buffer
+nnoremap <C-h> :bp<CR>
+
+" Next buffer
+nnoremap <C-l> :bn<CR>
+
+" Open .vimrc 
+nnoremap <leader>e :e $MYVIMRC<CR>
